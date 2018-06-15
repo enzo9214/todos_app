@@ -1,0 +1,20 @@
+<% @todos.each do |todo| %>
+
+	<div style='margin: 20px'>
+		<div class="card card-body bg-light">
+
+			<% if todo.completed %>
+				<del><%= todo.description %></del>
+			<% else %>
+				<%= todo.description %>
+			<% end %>
+
+			<%= link_to 'Completed', todo_complete_path(todo), { "class" => "btn btn-success"} %>
+			<%= link_to 'Edit', todo_edit_path(todo), { "class" => "btn btn-secondary"} %>
+			<%= link_to 'Destroy', todo, { "class" => "btn btn-danger", "method" => "delete" } %>
+		</div>
+	</div>
+
+<% end %>
+
+<%= link_to 'Crear ToDo', todos_new_path, { "class" => "btn btn-primary"} %>
