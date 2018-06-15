@@ -6,7 +6,7 @@
 			<div class="container" style='margin-top: 20px'>
 				<% if !todo.completed %>
 					<div class="card card-body bg-light" >
-						<%= todo.description  %>
+						<div style='text-align: center; margin: 10px'> <%= todo.description  %> </div>
 						<%= link_to 'Completed', todo_complete_path(todo), { "class" => "btn btn-success"} %>
 						<%= link_to 'Edit', todo_edit_path(todo), { "class" => "btn btn-secondary"} %>
 						<%= link_to 'Destroy', todo, { "class" => "btn btn-danger", "method" => "delete" } %>
@@ -22,7 +22,7 @@
 			<div class="container" style='margin-top: 20px'>
 				<% if todo.completed %>
 					<div class="card card-body bg-light" >
-						<%= todo.description  %>
+						<div style='text-align: center; margin: 10px'> <%= todo.description  %> </div>
 						<%= link_to 'Completed', todo_complete_path(todo), { "class" => "btn btn-success"} %>
 						<%= link_to 'Edit', todo_edit_path(todo), { "class" => "btn btn-secondary"} %>
 						<%= link_to 'Destroy', todo, { "class" => "btn btn-danger", "method" => "delete" } %>

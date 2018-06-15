@@ -1,5 +1,7 @@
-<%= form_with model: @todo, local:true do |form| %>
-	<%= form.label(:description, 'Descripción:') %>
-	<%= form.text_field :description %>
-	<%= form.submit %>
-<% end %>
+<div style="margin:20px">
+	<%= form_with model: @todo, local:true do |form| %>
+		<%= form.label(:description, 'Descripción:') %>
+		<%= form.text_field :description %>
+		<%= form.submit %>
+	<% end %>
+</div>

@@ -2,12 +2,13 @@
 
 	<div style='margin: 20px'>
 		<div class="card card-body bg-light">
-
-			<% if todo.completed %>
-				<del><%= todo.description %></del>
-			<% else %>
-				<%= todo.description %>
-			<% end %>
+			<div style='text-align: center; margin: 10px'>
+				<% if todo.completed %>
+					<del><%= todo.description %></del>
+				<% else %>
+					<%= todo.description %>
+				<% end %>
+			</div>
 
 			<%= link_to 'Completed', todo_complete_path(todo), { "class" => "btn btn-success"} %>
 			<%= link_to 'Edit', todo_edit_path(todo), { "class" => "btn btn-secondary"} %>
